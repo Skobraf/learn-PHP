@@ -2,10 +2,16 @@
 <html lang="eng">
 	<head>
 		<meta charset="utf-8">
-		<title>first page</title>
+		<title>l'instruction include</title>
 	</head>
 	<body>
-		<h1>this is HTML</h1>
-		<?php echo "this is PHP"; ?>
+		<?php 
+			$a=1;
+			function foo() {
+				global $a; // pour accéder a la variable globale
+				 $a + 1;
+			}
+			echo $a;
+		 ?>
 	</body>
 </html>
