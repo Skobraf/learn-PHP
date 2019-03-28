@@ -6,12 +6,12 @@
 	</head>
 	<body>
 		<?php 
-			$a=1;
-			function foo() {
-				global $a; // pour accéder a la variable globale
-				 $a + 1;
+			function test_static() {
+				static $a=0;
+				echo $a;
+				$a++;
 			}
-			echo $a;
+			// la variable statique ne perd pas sa valeur quand on sort d'une fonction
 		 ?>
 	</body>
 </html>
