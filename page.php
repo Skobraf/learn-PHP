@@ -6,12 +6,9 @@
 	</head>
 	<body>
 		<?php 
-			$a=7;
-			if($a == 5):
-				echo"le cinq";
-				else:
-					echo "le 7";
-				endif;
+			for ($i=0; $i < 4; $i++) { 
+				echo "hello world! <br>";
+			};
 			?>
 	</body>
 </html>
