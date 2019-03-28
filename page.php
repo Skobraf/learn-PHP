@@ -6,12 +6,13 @@
 	</head>
 	<body>
 		<?php 
-			function test_static() {
-				static $a=0;
-				echo $a;
-				$a++;
-			}
-			// la variable statique ne perd pas sa valeur quand on sort d'une fonction
-		 ?>
+			$tab=array(1=>'un', 2=> 'deux', 3 => 'trois');
+				foreach($tab as $valeur) {
+					echo "$valeur \n";
+				}
+				foreach($tab as $cle => $valeur) {
+					echo "$cle => $valeur \n";
+				}
+			?>
 	</body>
 </html>
