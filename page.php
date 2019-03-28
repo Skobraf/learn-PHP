@@ -6,13 +6,12 @@
 	</head>
 	<body>
 		<?php 
-			$tab=array(1=>'un', 2=> 'deux', 3 => 'trois');
-				foreach($tab as $valeur) {
-					echo "$valeur \n";
-				}
-				foreach($tab as $cle => $valeur) {
-					echo "$cle => $valeur \n";
-				}
+			$a=7;
+			if($a == 5):
+				echo"le cinq";
+				else:
+					echo "le 7";
+				endif;
 			?>
 	</body>
 </html>
