@@ -5,10 +5,10 @@
 		<title>l'instruction include</title>
 	</head>
 	<body>
-		<?php 
-			for ($i=0; $i < 4; $i++) { 
-				echo "hello world! <br>";
-			};
-			?>
+		<form action="menu.php" method="post">
+			name: <input type="text" name="username">
+			email: <input type="text" name="email">
+			<button type="submit"> click me</button>
+		</form>
 	</body>
 </html>
