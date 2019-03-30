@@ -4,8 +4,8 @@
 	</head>
 	<body>
 		<?php 
-			echo $_POST['username'];
-			echo $_REQUEST['email'];
-		 ?>
+			$tab = array("hello", "moto");
+			echo tab[0];
+		?>
 	</body>
 </html>
