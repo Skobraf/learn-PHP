@@ -5,15 +5,15 @@
 		<title>l'instruction include</title>
 	</head>
 	<body>
-		<?php
-			$tab = array('Faculté' =>"FacLink", 'Université'=> "UnivLin"); 
+		<?php 
+			$tab= [];
+			for ($i=0; $i < 10; $i++) { 
+				$tab["User".$i] = $i;
+			}
+			foreach ($tab as $key => $value) {
+				echo "$key ... $value";
+			}
 		 ?>
-		 <ul>
-		 	<?php 
-		 		foreach($tab as $key => $value) {
-		 			echo "<li><a href=$key> $key </a></li>";
-		 		}
-		 	 ?>
 		 </ul>
 	</body>
 </html>
