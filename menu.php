@@ -4,8 +4,18 @@
 	</head>
 	<body>
 		<?php 
-			$tab = array("hello", "moto");
-			echo tab[0];
-		?>
+			$nameErr = "";
+			if(empty($_POST["name"])) {
+				$nameErr = "Please enter a valid name";
+				echo "$nameErr";
+			}
+		 ?>
+		 <?php 
+		 	function trim($data) {
+		 		$data = trim($data);
+		 		return $data;
+		 		
+		 	}
+		  ?>
 	</body>
 </html>
