@@ -4,18 +4,18 @@
 	</head>
 	<body>
 		<?php 
-			$nameErr = "";
-			if(empty($_POST["name"])) {
-				$nameErr = "Please enter a valid name";
-				echo "$nameErr";
+			$serveur = "localhost";
+			$login = "root";
+			$pass = "";
+
+			try{
+				$connextion = new PDO("mysql:host=$serveur;dbname=test",$login,$pass);
+				$connextion->setAttribute(PDO::AFTER_ERRMODE, PDO::ERRMODE_EXCEPTION).
+				echo 'Connected!';
+			}
+			catch(PDOException $e){
+				echo "Echec:" .$e->getMessage();
 			}
 		 ?>
-		 <?php 
-		 	function trim($data) {
-		 		$data = trim($data);
-		 		return $data;
-		 		
-		 	}
-		  ?>
 	</body>
 </html>
