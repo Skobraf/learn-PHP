@@ -9,9 +9,14 @@
 			$pass = "";
 
 			try{
-				$connextion = new PDO("mysql:host=$serveur",$login,$pass);
+				$connextion = new PDO("mysql:host=$serveur;dbname=test",$login,$pass);
 				$connextion->setAttribute(PDO::AFTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$connextion ->exec("CREATE DATABASE db_name");
+				$codesql = "CREATE TABLE User(
+					id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+					nom VARCHAR(50),
+					prenom VARCHAR(50),
+					email VARCHAR(70)
+					)"
 				echo 'Created!';
 			}
 			catch(PDOException $e){
