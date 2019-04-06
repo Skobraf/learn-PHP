@@ -11,10 +11,18 @@
 			try{
 				$connextion = new PDO("mysql:host=$serveur;dbname=test",$login,$pass);
 				$connextion->setAttribute(PDO::AFTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$insrtion = "INSERT INTO User(nom,prenom,email)
-							VALUES('Abed','Ayoub', 'skobraf@gmail.com')";
+				$requete = $connexion->prepare("INSERT INTO User(nom,prenom,email)
+							VALUES(:nom,:prenom,:email)"
+						);
 
-					$connexion->exec($insrtion);
+					$requete->bindParam(':nom',$nom);
+					$requete->bindParam(':prenom',$prenom);
+					$requete->bindParam(':email',$email);
+
+					$nom = "Abed";
+					$prenom = "Ayoub";
+					$email = "ayoub@gmail.com";
+					$requete->execute();
 				echo 'Inserted!';
 			}
 			catch(PDOException $e){
