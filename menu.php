@@ -16,7 +16,8 @@
 					nom VARCHAR(50),
 					prenom VARCHAR(50),
 					email VARCHAR(70)
-					)"
+					)";
+					$connexion->exec($codesql);
 				echo 'Created!';
 			}
 			catch(PDOException $e){
