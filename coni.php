@@ -1,6 +1,6 @@
 <?php
-function connectMaBasi(){
-$basi = mysqli_connect ('localhost', 'root', '','mabase');
-return $basi;
+function connectMyDb(){
+$db = mysqli_connect ('localhost', 'root', '','mabase');
+return $db;
 }
 ?>

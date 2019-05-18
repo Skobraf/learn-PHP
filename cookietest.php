@@ -8,8 +8,8 @@ $pass=$_COOKIE['pass'];
 //Vérification et création du contenu personnalisé
 if($nom==$login AND $pass==$motpass)
 {
-$message= "<h1>BONJOUR ".$nom."</h1>";
-$contenu="<p> Votre contenu</p>";
+$message = "<h1>BONJOUR ".$nom."</h1>";
+$contenu ="<p> Votre contenu</p>";
 }
 else
 {
